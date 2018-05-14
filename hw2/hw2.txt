@@ -1,0 +1,28 @@
+CSCE 4523: Database Management Systems
+Spring 2018
+Assignment Two
+Due: Thursday, February 22, 2018 at the beginning of class
+
+
+Each task is worth 6 points.  You may refer to Oracle Notes Part Two for help with this assignment.  Do NOT use join or any other binary operations; instead, use sub-queries wherever
+needed.  Do not use more than one query for a task.  Do not display columns that are not required in the result.
+
+Run your queries in SSH or PuTTY terminal instead of on a web browser or a GUI interface.  Create a spool file to capture the output of your queries for tasks 1 through 5.  Turn in a hard
+copy of your spool file in class on Feb. 22 and email your queries (NOT QUERY RESULTS) before class time to mshukla@email.uark.edu with Subject line "DBMS Assignment Two".  The queries
+must be in clean text (without any unnecessary characters) in the body of the email, NOT in an ATTACHED FILE.  Also, make sure to write your name in the email.
+
+Check with me if you need further clarification on any of the following tasks.
+
+Tasks:
+
+1.  Determine the number of trips approved (as listed in Trip table) for employees of Marketing department.  Print the number.
+
+2.  Print names of employees who have been approved to take a trip but have not submitted any receipts yet.  Do not print the same employee's name more than once.
+
+3.  Find the trip with the highest estimated cost and print the name and contact person of the department where the corresponding employee works.
+
+4.  Print the names of the department none of whose employees have been listed to take a trip (as per the Trip table).
+
+5.  Print the names of cities for which the corresponding trip's estimated cost is less than the average transportation cost.  Your result must not show a city name more than once.
+
+====================================================================================

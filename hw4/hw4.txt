@@ -1,0 +1,35 @@
+Each task carries 6 points.  You may refer to Oracle notes Part Four for tasks 1-4 and Part Five for task 5.  Make sure your queries work correctly irrespective of the day they are run.
+
+Run your queries in SSH or PuTTY terminal and create a spool file to capture the results.  In case of task 5, show all the records in the view.  Submit a hard-copy of the spool file in class.  Email only the queries for tasks 1 to 4 and the view definition for task 5 to mshukla@email.uark.edu with Subject line "DBMS Assignment Four".  The queries must be in clean text in the body of the email and no unnecessary characters should be present.  Make sure to add your name to the email.
+
+Tasks:
+------
+1.      Find the trips for which the departure date is a Friday.  For each such trip, print the corresponding employee name, day of departure and day of return both spelled out completely, and number of days between the departure and return.
+
+2.      Determine and print the total number of employees who returned from a trip during the last weekend.
+
+3.      For all the receipts that were submitted in 2017, print the total amount for each expense type.  The expense type must be spelled out rather than printing "T" or "H" or "M".  That is, print the total "Transportation" cost, total "Hotel" cost, and total "Meals" cost incurred in 2017.
+
+4.      For every employee show the total number of trips he/she has taken.  The output must show employee names and corresponding number of trips.  If an employee has not taken any trip, print the employee's name and 0 (zero) next to his name.
+
+5.      Assume that receipts are due within 10 days of completion of a trip.  For example, if an employee returned from a trip on March 17, 2018, he/she must submit the receipts by March 27, 2018.  Create a view titled "Defaulters" that shows the employee name, the return date, and the number of days it has been since the return date for each employee that has violated the receipt submission policy.
+
+Create the view before you create the spool file.  The view creation command should not appear in your output files.  Rather, do the followings to show the view definition.
+
+   Type the following 'SET' command only once after you log on to oracle.
+     SQL>  Set Long n
+       (replace n with an integer that is more than the maximum number of characters in the view definition)
+
+Then use the following 'SELECT' command to display the view definition.  The output of this command must appear in your spool file and email.
+
+   SQL> Select text from user_views where view_name = '????';
+
+   Replace ???? with the view name in upper case.  Make sure to use quotes around the view name.
+
+
+The spool file must show the queries for tasks 1 to 4, their output, the view definition and the records in the view.
+
+The email must contain the queries for tasks 1 to 4 and the view definition for task 5.
+
+======================================================================================
+

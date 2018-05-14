@@ -1,0 +1,79 @@
+The project schema is available on class web page.  Click on the link "Project Schema".
+
+Create the tables and add at least 10 records to each table.  You may use Part One and Part Two of Oracle notes provided on class web page for help.
+
+You must use the schema EXACTLY as defined.  Otherwise, you may have to redo the first assignment later (which will not be graded again) in order to continue with the remaining
+assignments.  So, do it right the first time.
+
+Please use the ssh or PuTTY interface to complete this and all future assignments.
+
+
+What to turn in:
+=============
+
+1. Show all tables you have created.  Use the command
+        Select * from cat;
+
+2. Show the schema of each table.  Use the command
+        desc tablename
+    Replace the word "tablename" with actual name of each table.
+
+3. Show the primary keys.
+
+4. Show the foreign key(s).
+
+5. Show other constraints (if any) on each table.
+
+6. Finally, show all records in each table.
+
+
+The commands for tasks 3, 4, and 5 are given below.  Be careful of syntax while typing the following commands (you may copy and paste each of the following three commands and run, rather
+than typing each of them).
+
+To show the primary keys:
+      select a.owner, a.table_name, column_name primary_key,  a.constraint_name
+      from   user_cons_columns a, user_constraints b
+      where  a.constraint_name = b.constraint_name and constraint_type = 'P';
+
+   Note the upper case 'P' in the last line of the above command.
+
+To show the foreign keys:
+      select a.owner, a.table_name, a.column_name foreign_key,
+             b.table_name Referring_table, b.column_name Primary_key
+      from   user_cons_columns a, user_cons_columns b, user_constraints c
+      where  a.constraint_name = c.constraint_name and c.r_constraint_name = b.constraint_name;
+
+To show all other constraints:
+        select owner, table_name, search_condition from
+             user_constraints where search_condition is not null;
+
+
+If you have missed a constraint during table creation and want to add that or need to modify a constraint, please see "Adding and Removing Constraints" section of Part Six of Oracle notes.
+
+To make the output of tasks 3, 4, and 5 look nicer, set the following formats before executing those commands.  The formats should be set from sqlplus (i.e., after logging on to oracle).
+
+         SQL> column owner format a12
+         SQL> column table_name format a12
+         SQL> column foreign_key format a12
+         SQL> column primary_key format a12
+         SQL> column referring_table format a15
+         SQL> column search_condition format a45
+
+
+To turn in your output, on SQL prompt, type:
+                        spool asgn1
+
+Then execute the commands for tasks 1 through 6 to display the results on screen.  Finally, type:
+                        spool off
+
+Exit from sqlplus.  Print the file asgn1.lst from your church.csce.uark.edu account and turn in.
+
+
+If you need any further explanation, please see me.
+
+==========================================================
+
+IMPORTANT:  After you print and turn in an assignment (either this or the other ones that will be assigned in future), do not modify your tables until the assignment is graded and returned
+to you.  I will, when in doubt, check your tables to make sure that the output you turned in was obtained from the tables in your account.
+
+==========================================================

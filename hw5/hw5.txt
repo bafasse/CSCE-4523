@@ -1,0 +1,25 @@
+CSCE 4523: Database Management Systems
+Spring 2018
+Assignment Five
+Due: Thursday, April 26, 2018 at the beginning of class
+
+
+You may refer to PL/SQL part of oracle notes to complete this assignment.
+
+Write a PL/SQL procedure that performs the following tasks in order to insert a record into the Trip table.  Each task is worth six points.
+
+1.  The procedure accepts values for Emp_ID, To_City, Dep_Date, Return_Date, and Est_Cost attributes.
+
+2.  It then checks to see if the Emp_ID value is valid (i.e., the value exists in the Employee table).  If not, the procedure prints an appropriate message and quits.
+
+3.  It checks to ensure the return date is not before the departure date.  Else, it prints an appropriate message and quits.
+
+4.  It checks to ensure the estimated cost is within the acceptable range (see the constraint on schema).  Else, it quits after printing an appropriate message.
+
+5.  If all the checks (tasks 2, 3, and 4) pass, the procedure computes the value of the ID attribute by adding one to the maximum ID value that exists in Trip table.  It then inserts the record to the Trip table and prints a message indicating successful addition of the record.
+
+Save the procedure in a file named as xxxxx.sql, replacing 'xxxxx' with your last name.  Email the file AS AN ATTACHMENT to mshukla@email.uark.edu with the subject line "DBMS Class Assignment Five".
+
+Generate a spool file showing the procedure code, output for a failed situation for each of the tasks 2, 3, and 4, and output of a successful record insertion (task 5).  Turn in a hard-copy of the spool file in class.
+
+===================================================================================

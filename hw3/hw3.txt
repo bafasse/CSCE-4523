@@ -1,0 +1,28 @@
+CSCE 4523: Database Management Systems
+Spring 2018
+Assignment Three
+Due: Thursday, March 8, 2018 at the beginning of class
+
+
+Each task carries 6 points.  You may refer to Oracle notes Part Three for help with this assignment.  Use joins instead of subqueries whenever possible.  Display only the required columns
+in the result.
+
+Run your queries in SSH or PuTTY terminal.  Create a spool file to capture the output of your queries.  Turn in a hard copy of your spool file in class on March 8 and email just your
+queries before class time to mshukla@email.uark.edu with Subject line "DBMS Assignment Three".  The queries must be in clean text in the body of the email; no unnecessary characters must
+be present.  Also, add your name to
+the email.
+
+Check with me if you need further clarification on any of the following tasks or on the materials on Oracle notes.
+
+Tasks:
+
+1.  For each expense type, determine the total expense amount.  The output should show the expense type and the corresponding total amount.  Print the result in ascending order of amount.
+
+2.  Show the total number of trips approved for employees of each department.  If none of the employees of a department have any approved trip, the department information should not appear
+in the result.  Your output should show the department names and total number of trips.
+
+3.  Query the Trip table to show the number of distinct days when both a departure and a return occur.  Note: They need not be for the same trip.
+
+4.  For each approved trip, show the corresponding employee name, departure date, name of the city the employee visited, and the receipt submission date (if receipt has been submitted).
+
+5.  Find out the trips for which the estimated cost is less than the actual expense and print those two costs along with the corresponding trip id.
